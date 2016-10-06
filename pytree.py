@@ -10,10 +10,9 @@ numset = set('0123456789')
 
 def func(x):
 	x = x.lower()
-	for (i,key) in enumerate(x):
+	for (i, key) in enumerate(x):
 		if key in string.ascii_lowercase or key in numset:
 			return x[i:]
-
 		
 def dfs(path, prefix):
 	files = [x for x in os.listdir(path) if x[0] != '.']
