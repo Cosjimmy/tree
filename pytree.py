@@ -12,10 +12,10 @@ def func(x):
 	x = x.lower()
 	for (i,key) in enumerate(x):
 		if key in string.ascii_lowercase or key in numset:
-		return x[i:]
+			return x[i:]
 
 		
-def dfs(path,prefix):
+def dfs(path, prefix):
 	files = [x for x in os.listdir(path) if x[0] != '.']
 	files = sorted(files, key=func)
 	num_dir, num_file = 0, 0
